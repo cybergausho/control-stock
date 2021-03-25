@@ -1,0 +1,15 @@
+<?php
+
+?>
+
+<div id="login">
+    <h3>Login</h3>
+    <form method="post" action="" name="login">
+        <label>DNI</label>
+        <input type="text" name="dni" autocomplete="off" />
+        <label>Password</label>
+        <input type="password" name="password" autocomplete="off" />
+        <div class="errorMsg"><?php echo $errorMsgLogin; ?></div>
+        <input type="submit" class="button" name="loginSubmit" value="Login">
+    </form>
+</div>
