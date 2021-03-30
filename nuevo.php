@@ -1,7 +1,5 @@
 <?php
 
-//implementar un header estandar con session_control
-
 include_once("class/Stock.php");
 include_once("class/config.php");
 $mod = new Stock();

@@ -1,28 +1,13 @@
 <?php
 class Usuario{
 
-//   public $dni;
-//    public $nombre;
-//    public $correo;
-//    public $password;
+   public $dni;
+   public $nombre;
+   public $correo;
+   public $password;
 
 
-
-    //CONSTRUCTOR
-    //public function __construct($dni, $nombre, $correo, $password){
-    //    $this->dni = $dni;
-    //    $this->nombre = $nombre;
-     ///   $this->correo = $correo;
-    //    $this->password = $password;
-        
-    //}
-
-
-    /* -------------------- MetodoS ----------------------- */
-    //GETTERS, SETTERS
-
-
-    /* INICIAR SESION */
+    /* -------------------------- INICIAR SESION --------------------- */
     public function userLogin($dni, $password){
         try {
             echo "<p>" . $dni . $password . "</p>";
@@ -51,7 +36,7 @@ class Usuario{
 
 
 
-    /* REGISTRAR USUARIO */
+    /* -------------------------- REGISTRAR USUARIO --------------------- */
     public function userRegistration($dni, $passwd, $correo, $nombre, $permiso){
         try {
             $db = getDB();

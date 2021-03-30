@@ -6,7 +6,7 @@ define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'taro');
 define('DB_PASSWORD', '0ndavag4');
 define('DB_DATABASE', 'stock');
-define("BASE_URL", "http://localhost/stock/"); 
+define("BASE_URL", "http://localhost/control-stock/"); 
 
 function getDB(){
 $dbhost=DB_SERVER;

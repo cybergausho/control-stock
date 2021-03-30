@@ -8,20 +8,8 @@ class Stock
     public $cantidad;
     public $estado;
     public $ubicacion;
-    /*
-    // Constructor
-    public function __construct($idStock, $nombre, $descripcion, $cantidad, $estado, $ubicacion)
-    {
-        $this->idStock = $idStock;
-        $this->nombre = $nombre;
-        $this->descripcion = $descripcion;
-        $this->cantidad = $cantidad;
-        $this->estado = $estado;
-        $this->ubicacion = $ubicacion;
-    }
-   -------------------- MetodoS ----------------------- */
-
-
+ 
+    
     /* -------------------------- NUEVO STOCK --------------------- */
     public function stockAgregar($nombre, $descripcion, $cantidad, $estado, $ubicacion)
     {
@@ -44,7 +32,7 @@ class Stock
     }
 
 
-    //mostrar todos
+    /* -------------------------- MOSTRAR TODOS --------------------- */
     public function listarTodo()
     //instanciar db
     {
@@ -94,8 +82,8 @@ class Stock
             $stmt->bindParam(":ubicacion", $ubicacion, PDO::PARAM_STR);
             var_dump($stmt);
             $stmt->execute();
-
             $db = null;
+            
         } catch (PDOException $e) {
             echo 'Error al modificar stock' . $e->getMessage();
         }

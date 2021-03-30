@@ -1,7 +1,5 @@
 <?php
-//implementar un header estandar con session_control
-
-$idStock = $_POST['idStock']; 
+$idStock = $_GET['idStock']; 
 include_once("class/Stock.php");
 include_once("class/config.php");
 
@@ -27,7 +25,7 @@ if ($modify) {
 if ($deleter) {
     $mod->stockEliminar($idStock);
 }
-
+echo $idStock;
 
 ?>
 

@@ -16,7 +16,6 @@ $userDetails = $userClass->userDetails($session_uid);
     $stockClass = new Stock();
     $data = $stockClass->listarTodo();
     //print_r($data); ?></p>
-    <form method="POST" action="<?php echo BASE_URL?>modificar.php">
 <table border="1px">
     <thead>
         <th>id Stock</th>
@@ -27,31 +26,28 @@ $userDetails = $userClass->userDetails($session_uid);
         <th>Opcion</th>
     </thead>
     <tbody>
-        <?php foreach ($data as $valor) {
-            echo "
+        <?php foreach ($data as $valor) { ?>
         <tr>
-            <td>" . $valor['idStock']. "</td>
-            <td>" . $valor['nombre'] . " </td>
-            <td>" . $valor['descripcion'] . "  </td>
-            <td>" . $valor['cantidad'] . "</td>
-            <td>" . $valor['estado'] . '</td>
+            <td><?php echo $valor['idStock']?></td>
+            <td><?php echo $valor['nombre']?> </td>
+            <td><?php echo $valor['descripcion']?></td>
+            <td><?php echo $valor['cantidad']?></td>
+            <td><?php echo $valor['estado']?> </td>
             <td>
-            <input type="hidden" name="idStock" value="'.$valor['idStock'].'">
-            <input type="submit" name="detalle" value="Detalles">
+            <a href="modificar.php?idStock=<?php echo $valor['idStock']?>" class="btn" >Modificar</a>
         </td>
 
-        </tr> ';
-        }
+        </tr> 
+        <?php }
         ?>
     </tbody>
 </table>
-</form>
 
 
 
 
 
-<!-- IMPLEMENTAR PAGINADO JS -->
+<!-- VER PAGINADO-->
 
 
 
