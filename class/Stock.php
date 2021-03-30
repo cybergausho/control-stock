@@ -80,7 +80,7 @@ class Stock
             $stmt->bindParam(":cantidad", $cantidad, PDO::PARAM_INT);
             $stmt->bindParam(":estado", $estado, PDO::PARAM_STR);
             $stmt->bindParam(":ubicacion", $ubicacion, PDO::PARAM_STR);
-            var_dump($stmt);
+            //var_dump($stmt);
             $stmt->execute();
             $db = null;
             
@@ -103,10 +103,6 @@ class Stock
             echo 'Error al eliminar stock' . $e->getMessage();
         }
     }
-
-
-    //setters y getters...
-
 
 
 }

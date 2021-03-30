@@ -1,7 +1,7 @@
 <?php
 include("class/config.php");
 include('class/Usuario.php');
-
+//comprueba que exista sesion  - deberia incluirse en todas las pag
 if (!empty($_SESSION['uid'])) {
     $session_uid = $_SESSION['uid'];
     $url = BASE_URL . 'home.php';
@@ -32,13 +32,8 @@ if (!empty($_POST['loginSubmit'])) {
 }
 
 
-
-
-
-
-
-
 /* REGISTRARSE */
+
 if (!empty($_POST['signupSubmit'])) {
     //echo "<p>hello world</p>";
     $dni = $_POST['dniForm'];

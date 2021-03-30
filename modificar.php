@@ -25,7 +25,6 @@ if ($modify) {
 if ($deleter) {
     $mod->stockEliminar($idStock);
 }
-echo $idStock;
 
 ?>
 

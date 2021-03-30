@@ -12,11 +12,12 @@ $userDetails = $userClass->userDetails($session_uid);
 
 
 <h3>Elementos en stock</h3>
-<p><?php
+<?php
     $stockClass = new Stock();
     $data = $stockClass->listarTodo();
-    //print_r($data); ?></p>
-<table border="1px">
+    //print_r($data); ?>
+
+<table border="">
     <thead>
         <th>id Stock</th>
         <th>Nombre</th>
